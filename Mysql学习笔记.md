@@ -98,8 +98,23 @@ desc[ribe] table 查表结构
 order by column desc[ent]是排序
 ```
 
+# 去重用 DISTINCT 关键字
+```sql
+SELECT DISTINCT owner FROM pet;
+```
 
+# SQL模式匹配允许你使用“_”匹配任何单个字符，而“%”匹配任意数目字符(包括零字符)。
+```sql
+#要想找出以“b”开头的名字：
+SELECT * FROM pet WHERE name LIKE 'b%';
+#要想找出正好包含5个字符的名字，使用“_”模式字符：
+SELECT * FROM pet WHERE name LIKE '_____';
+```
 
+# 查询表的索引
+```sql
+show index from user_t;
+```
 
 
 
