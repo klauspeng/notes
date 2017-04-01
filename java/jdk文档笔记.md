@@ -1,5 +1,5 @@
 # java.lang.Boolean
-```
+```java
 package com.klaus.learn.lang.Boolean;
 
 import java.util.HashMap;
