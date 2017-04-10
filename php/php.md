@@ -14,7 +14,7 @@ $value .= $other_value;
 
 ## 运行时间统计示例
 ```php
-<?php
+
 /**
 * Simple function to replicate PHP 5 behaviour
 */
@@ -33,5 +33,5 @@ $time_end = microtime_float();
 $time = $time_end - $time_start;
 
 echo "Did nothing in $time seconds\n";
-?>
+
 ```
