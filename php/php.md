@@ -112,3 +112,10 @@ $contents = stream_get_contents($handle);
 fclose($handle); 
 echo $contents; 
 ```
+
+## 用户表与登录表分开的好处?
+1. 面向象面考虑,用户信息用户用户名密码进门钥匙
+2. 性能面考虑,数据检索候列少要快些且密码东西登录进没用,用户经常登录，但个人信息相对会少更改查看
+3. 安全性考虑，模块查询用户信息直接密码带容易现恶意操作
+
+## 缓存，问了memcache与redis的区别，redis的优势之处。怎样解决memcache命中率低的问题，问了在实际项目中memcache命中率。是否部署过redis服务器。
