@@ -28,3 +28,18 @@
 2. 编写个数 onload-只能写一个 ready-可以多个
 3. 简化写法 onload-不能 ready-$(fuction(){})
 
+## jQuery对象与DOM对象
+### jQuery对象转换DOM对象
+1. 使用index方法
+2. 使用get()方法
+```js
+var input = $("#a");
+//jq获取
+alert(input.val());
+//1.使用index方法
+alert(input[0].value);
+//2.使用get()方法
+alert(input.get(0).value);
+```
+
+
