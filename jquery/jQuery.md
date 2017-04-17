@@ -41,5 +41,17 @@ alert(input[0].value);
 //2.使用get()方法
 alert(input.get(0).value);
 ```
+### DOM对象转换jQuery对象
+> 用$()把DOM对象包装器来就OK了
+
+### jquery与其他js共存
+> 使用jQuery.noConfict()方法释放$的权
+
+##　jquery选择器
+
+
+
+
+
 
 
