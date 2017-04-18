@@ -1,6 +1,7 @@
 # Redis学习笔记
 
 命令不区分大小写，但key区分大小写！
+## [中文手册](http://www.cnblogs.com/zcy_soft/archive/2012/09/21/2697006.html#key_del)
 
 ## windows注册成服务
 > redis-server.exe --service-install redis.6380.conf --service-name redis6380 --port 6380
