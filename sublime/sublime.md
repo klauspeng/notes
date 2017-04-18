@@ -17,3 +17,8 @@ ctrl+shift+p打开命令输入，打开Preference: MarkdownEditing Setting: User
 插件：OminiMarkupPreview
 
 快捷键：Ctrl+Alt+O: Preview Markup in Browser.
+
+## 大小写转换
+先选中要转换的部分  
+大写转换小写：ctrl+k l  
+小写转换大写：ctrl+K u
