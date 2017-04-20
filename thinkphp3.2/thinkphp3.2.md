@@ -63,6 +63,32 @@ Application/Home/Model/UserModel.class.php
 'URL_HTML_SUFFIX' => 'html|shtml|xml' 
 ```
 
+### URL生成
+U('地址表达式',['参数'],['伪静态后缀'],['显示域名'])
+
+### 获取输入变量（Input）
+I('变量类型.变量名',['默认值'],['过滤方法'],['额外数据源'])  
+系统默认的变量过滤机制:'htmlspecialchars'  
+
+### 判断请求类型
+- IS_GET => 判断是否是GET方式提交 
+- IS_POST => 判断是否是POST方式提交 
+- IS_PUT => 判断是否是PUT方式提交 
+- IS_DELETE => 判断是否是DELETE方式提交 
+- IS_AJAX => 判断是否是AJAX提交 
+- REQUEST_METHOD => 当前提交类型 
+
+### 空操作
+> 是指系统在找不到请求的操作方法的时候，会定位到空操作（_empty）方法来执行，利用这个机制，我们可以实现错误页面和一些URL的优化。
+
+### 空控制器
+> 是指当系统找不到请求的控制器名称的时候，系统会尝试定位空控制器(EmptyController)，利用这个机制我们可以用来定制错误页面和进行URL的优化。
+
+### 页面trace
+'SHOW_PAGE_TRACE' =>true, 
+
+
+
 
 
 
