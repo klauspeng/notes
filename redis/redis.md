@@ -80,3 +80,16 @@
 4. zadd 添加元素到集合，元素在集合中存在则更新对应score
 5. 命令如下：    
 ![redis zset](http://ww1.sinaimg.cn/large/80eaa069ly1feqw0bhlqrj20f70co3yz.jpg)
+
+
+## 主从同步
+[参考文章](http://www.cnblogs.com/liuling/p/2014-4-19-02.html)  
+启动主从服务后，直接在从客户端输入命令`slaveof 192.168.0.100 6379`  (映射到主服务器上)  
+
+## phpredis扩展常用命令
+### 连接
+```php
+$redis = new redis();  
+$result = $redis->connect('127.0.0.1', 6379);  
+var_dump($result); //结果：bool(true)  
+```
