@@ -57,6 +57,8 @@ session与cookie的区别?
 1. session:储存用户访问的全局唯一变量,存储在服务器上的php指定的目录中的（session_dir）的位置进行的存放
 2. cookie:用来存储连续访问一个页面时所使用，是存储在客户端，对于Cookie来说是存储在用户WIN的Temp目录中的。
 3. 两者都可通过时间来设置时间长短
+4. 通过设置session.use_trans_sid = 1，防止禁用cookie后session不能使用，会自动拼接session_id到href里面
+5. 获取session_id用 session_id(); 方法
 
 ## 写出 SQL语句的格式 : 插入 ，更新 ，删除
 1. insert into user values (2,"pthlp","1990-12-03 00:00:00");
