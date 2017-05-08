@@ -19,6 +19,20 @@ ctrl+shift+p打开命令输入，打开Preference: MarkdownEditing Setting: User
 快捷键：Ctrl+Alt+O: Preview Markup in Browser.
 
 ## 大小写转换
-先选中要转换的部分  
-大写转换小写：ctrl+k l  
+先选中要转换的部分
+大写转换小写：ctrl+k l
 小写转换大写：ctrl+K u
+
+## 主题ayu
+1. package control 安装 ayu
+2. [主题链接](https://github.com/dempfi/ayu)
+3. 设置
+```json
+"ui_separator":             true, // separators between panels
+"ui_font_size_small":       true, // smaller UI font size(sidebar, statusbar etc)
+"ui_big_tabs":              true, // increased tab height
+"ui_fix_tab_labels":        true, // to fix tab labels if they look not right
+"ui_font_source_code_pro": true, // use [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro) for UI
+"ui_wide_scrollbars":  true,  // wider scrollbars
+"ui_sidebar_highlight_row": true // to highlight whole row for current item in sidebar
+```
