@@ -251,3 +251,11 @@ function quickSort($arr) {
     return array_merge($left_array, array($base_num), $right_array);
 }
 ```
+
+## 两个路径预定义常量
+separator：分隔符
+### DIRECTORY_SEPARATOR
+DIRECTORY_SEPARATOR：路径分隔符，linux上就是‘/'    windows上是‘\'
+### PATH_SEPARATOR
+PATH_SEPARATOR：include多个路径使用，在windows下，当你要include多个路径的话，你要用”;”隔开，但在linux下就使用”:”隔开的。
+这2个常量的使用能够避免不同平台的兼容性问题
