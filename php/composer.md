@@ -12,9 +12,7 @@
 }
 ```
 运行`composer install`即可  
-![](http://ww1.sinaimg.cn/large/80eaa069ly1feys13n8epj20ti096tda.jpg)
-目录结构：  
-![](http://ww1.sinaimg.cn/large/80eaa069ly1feys4g5jrmj20hg0fm75a.jpg)
+![](https://github.com/klauspeng/notes/raw/master/img/composer.png)
 
 ## 自动加载
 除了库的下载，Composer 还准备了一个自动加载文件，它可以加载 Composer 下载的库中所有的类文件。  
