@@ -1,6 +1,10 @@
 # Redis学习笔记
 
-命令不区分大小写，但key区分大小写！
+## window下安装 
+[github地址](https://github.com/MSOpenTech/redis/releases)
+
+> 命令不区分大小写，但key区分大小写！
+
 ## [中文手册](http://www.cnblogs.com/zcy_soft/archive/2012/09/21/2697006.html#key_del)
 
 ## windows注册成服务
