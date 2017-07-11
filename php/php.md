@@ -259,3 +259,15 @@ DIRECTORY_SEPARATOR：路径分隔符，linux上就是‘/'    windows上是‘\
 ### PATH_SEPARATOR
 PATH_SEPARATOR：include多个路径使用，在windows下，当你要include多个路径的话，你要用”;”隔开，但在linux下就使用”:”隔开的。
 这2个常量的使用能够避免不同平台的兼容性问题
+
+## 多维数组var_dump展示不全
+[参考链接](http://blog.csdn.net/Merlin_feng/article/details/51733354)
+在php.ini里的xdebug节点中，追加一下配置：
+```ini
+;最多孩子节点数
+xdebug.var_display_max_children=128
+;最大字节数
+xdebug.var_display_max_data=512
+;最大深度   
+xdebug.var_display_max_depth=5  
+```
