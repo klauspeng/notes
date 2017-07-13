@@ -268,6 +268,89 @@ PATH_SEPARATOR：include多个路径使用，在windows下，当你要include多
 xdebug.var_display_max_children=128
 ;最大字节数
 xdebug.var_display_max_data=512
-;最大深度   
-xdebug.var_display_max_depth=5  
+;最大深度
+xdebug.var_display_max_depth=5
+```
+
+
+### http分块输出
+[参考链接](https://www.douban.com/note/330602704/)
+```php
+public function csv()
+{
+    $content = array("我是文章题目", "我是文章简介", "我是章节索引", "我是章节内容",);
+    $buffer_size = 4096;
+    foreach ($content as $c) {
+        echo str_pad( "<p>$c</p>", $buffer_size);
+        ob_flush();
+        flush();
+        sleep(1);                 //我们这里故意放慢节奏，等待一秒
+    }
+}
+```
+应用-csv大批量导出：
+
+[参考链接](http://www.cnblogs.com/houdj/p/6492009.html)
+```php
+<?php
+class CsvExport
+{
+    // 每次查询数量
+    public $pre_count = 5000;
+    // PHP文件句柄
+    private $fp = null;
+
+    /**
+     * CsvExport constructor.
+     *
+     * @param $name 文件名字（默认数据导出）
+     */
+    public function __construct($name = '数据导出')
+    {
+        header("Content-type:application/vnd.ms-excel");
+        header("Content-Disposition:filename=" . iconv("UTF-8", "GB18030", $name) . ".csv");
+
+        // 打开PHP文件句柄
+        $this->fp || $this->fp = fopen('php://output', 'a');
+
+    }
+
+    /**
+     * 设置输出数据
+     *
+     * @param     $data              数组
+     * @param int $isDoubleDimension 是否为二维数组（默认是）
+     */
+    public function setDate(array $data,$isDoubleDimension = 1)
+    {
+        if ($isDoubleDimension)
+        {
+            foreach ($data as $item)
+            {
+                $rows = array();
+                foreach ($item as &$export_obj)
+                {
+                    $rows[] = iconv('utf-8', 'GB18030', $export_obj);
+                }
+                fputcsv($this->fp, $rows);
+            }
+            unset($export_data);
+        }
+        else
+        {
+            $rows = array();
+            foreach ($data as &$d)
+            {
+                $rows[] = iconv('utf-8', 'GB18030', $d);
+            }
+            unset($d);
+            fputcsv($this->fp, $rows);
+        }
+
+        // http分块输出
+        ob_flush();
+        flush();
+
+    }
+}
 ```
