@@ -5,7 +5,7 @@
 
 php笔记：[php](https://github.com/klauspeng/notes/blob/master/php/php.md)
 
-```
+```php
 <?php
 class CsvExport
 {
