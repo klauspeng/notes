@@ -36,3 +36,9 @@ ctrl+shift+p打开命令输入，打开Preference: MarkdownEditing Setting: User
 "ui_wide_scrollbars":  true,  // wider scrollbars
 "ui_sidebar_highlight_row": true // to highlight whole row for current item in sidebar
 ```
+
+## 批量插入递增数字
+插件：insertNum [github地址](https://github.com/jbrooksuk/InsertNums)
+
+Ctrl+Shift+L进入多行编辑模式，再按 Ctrl+Alt+N  
+Ctrl+Shift+Alt+N 可设置初始值，以及step
