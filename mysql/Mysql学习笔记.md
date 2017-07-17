@@ -115,13 +115,14 @@ SELECT * FROM pet WHERE name LIKE '_____';
 ```sql
 show index from user_t;
 ```
+## CURD
+中文简介  
+> CRUD是指在做计算处理时的增加(Create)、查询(Retrieve)（重新得到数据）、更新(Update)和删除(Delete)几个单词的首字母简写。主要被用在描述软件系统中数据库或者持久层的基本操作功能。
 
+英文释义  
+> In computing, CRUD is an acronym for create, retrieve, update, and delete. It is used to refer to the basic functions of a database or persistence layer in a software system.
 
-
-
-
-
-
-
-
-
+1. C reate new records
+2. R etrieve existing records
+3. U pdate existing records
+4. D elete existing records.
