@@ -357,3 +357,7 @@ class CsvExport
 
 ## PSR规范
 这边文章说的比较好，[参考链接](http://www.cnblogs.com/x3d/p/php-psr-standards.html)
+
+## 生成唯一ID
+`md5(uniqid(md5(microtime(true)),true))`
+[参考链接](http://blog.csdn.net/ghostyusheng/article/details/53788087)
