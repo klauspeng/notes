@@ -11,3 +11,6 @@
 
 ## git设置
 Path to Git executable:`D:\Program Files (x86)\Git\cmd\git.exe`
+
+## 激活
+[参考文章](http://blog.csdn.net/hywerr/article/details/72084061)
