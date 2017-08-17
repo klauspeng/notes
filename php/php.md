@@ -361,3 +361,8 @@ class CsvExport
 ## 生成唯一ID
 `md5(uniqid(md5(microtime(true)),true))`
 [参考链接](http://blog.csdn.net/ghostyusheng/article/details/53788087)
+
+
+## php-resque
+[github传送门](https://github.com/chrisboulton/php-resque)
+[php-resque使用](http://avnpc.com/pages/run-background-task-by-php-resque#toc8)
