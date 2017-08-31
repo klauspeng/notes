@@ -366,3 +366,8 @@ class CsvExport
 ## php-resque
 [github传送门](https://github.com/chrisboulton/php-resque)
 [php-resque使用](http://avnpc.com/pages/run-background-task-by-php-resque#toc8)
+
+## PDO_Mysql
+1. 数据库抽象层 PDO
+2. 111
+
