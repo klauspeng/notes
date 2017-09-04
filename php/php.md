@@ -368,4 +368,32 @@ class CsvExport
 [php-resque使用](http://avnpc.com/pages/run-background-task-by-php-resque#toc8)
 
 ## PDO_Mysql
-1. 数据库抽象层 PDO
+数据库抽象层 PDO
+
+### 持久化连接：
+`PDO::ATTR_PERSISTENT => true`
+> 必须在传递给 PDO 构造函数的驱动选项数组中设置
+
+
+测试了一个例子：
+```php
+$dbh = new PDO('mysql:host=localhost;dbname=test', 'root', 'root');
+$stmt = $dbh->prepare("INSERT INTO user (name, pass) VALUES (:name, :value)");
+$stmt->bindParam(':name', $name);
+$stmt->bindParam(':value', $value);
+
+// 插入一行
+$name = 'one';
+$value = 1;
+$stmt->execute();
+
+// 用不同的值插入另一行
+$name = " three'); DROP TABLE table;--";
+$value = 2;
+$stmt->execute();
+
+var_dump($stmt->errorInfo());
+```
+执行结果：
+
+![mysql](https://github.com/klauspeng/notes/raw/master/img/pdo.png)
