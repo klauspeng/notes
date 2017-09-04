@@ -5,10 +5,10 @@
 
 ## 同时推送到多个仓库
 1. 修改./git/conf文件，增加remote下url
-2. 运行`git push -f all master` all就是对应的remote名字 强制本地更新到远端
+2. 运行`git push -f origin master` origin就是对应的remote名字 强制本地更新到远端
 3. 接着就正常使用了
 ```ini
-[remote "all"]
+[remote "origin"]
     url = git@github.com:klauspeng/cc.git
     url = git@git.oschina.net:klauspeng/cc.git
 ```
