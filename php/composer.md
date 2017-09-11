@@ -20,3 +20,38 @@
 ```php
 require 'vendor/autoload.php';
 ```
+
+## 命令行
+1. 初始化 init - - 参数
+2. 安装 install - - 参数
+3. 更新 update - - 参数
+4. 申明依赖 require - - 参数
+5. 全局执行 global
+6. 搜索 search - - 参数
+7. 展示 show - - 参数
+8. 依赖性检测 depends - - 参数
+9. 有效性检测 validate
+10. 依赖包状态检测 status
+11. 自我更新 self-update - - 参数
+12. 更改配置 config - - 使用方法 - - 参数 - - 修改包来源
+13. 创建项目 create-project - - 参数
+14. 打印自动加载索引 dump-autoload - - 参数
+15. 查看许可协议 licenses
+16. 执行脚本 run-script
+17. 诊断 diagnose
+18. 归档 archive - - 参数
+19. 获取帮助信息 help
+
+## 包版本
+名称|实例
+-|-
+确切版本号| `1.0.2`
+区间| `>=1.0,<1.1` 
+通配符 | `1.0.*` 相当于 `>=1.0,<1.1`
+赋值运算符 | `~1.2` 相当于 `>=1.2,<2.0` (指定最低版本,允许版本号的最后一位数字上升) <br> `^0.3` 相当于 `>=0.3.0,<0.4.0`
+
+## 优化自动加载
+`composer dump-autoload --optimize`
+
+转换 PSR-0/4 autoloading 到 classmap 可以获得更快的加载支持。
+特别是在生产环境下建议这么做，但由于运行需要一些时间，因此并没有作为默认值。
