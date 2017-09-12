@@ -273,7 +273,7 @@ xdebug.var_display_max_depth=5
 ```
 
 
-### http分块输出
+## http分块输出
 [参考链接](https://www.douban.com/note/330602704/)
 ```php
 public function csv()
@@ -370,7 +370,7 @@ class CsvExport
 ## PDO_Mysql
 数据库抽象层 PDO
 
-### 持久化连接：
+持久化连接：
 `PDO::ATTR_PERSISTENT => true`
 > 必须在传递给 PDO 构造函数的驱动选项数组中设置
 
