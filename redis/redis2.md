@@ -4,6 +4,7 @@
 - [连接](#连接)
 - [服务端](#服务端)
 - [字符串](#字符串)
+- [哈希](#哈希)
 
 ## 连接
 
@@ -51,3 +52,76 @@ incrByFloat | 以浮点递增 | `$redis->incrByFloat('key1', 1.5);`
 decr, decrBy | 递减 | `$redis->decr('key1');` <br> `$redis->decrBy('key1', 10);`
 mGet, getMultiple | 批量获取值 | `$redis->mGet(array('key1', 'key2', 'key3'));`
 getSet | 设置一个值，并返回该键上的前一个值 | `$redis->getSet('x', 'lol');`
+randomKey | 返回随机key | `$key = $redis->randomKey();`
+move | 将键移动到不同的数据库 | `$redis->move('x', 1);`
+rename, renameKey | 重命名 | `$redis->rename('x', 'y');`
+renameNx | 存在即重命名
+expire, setTimeout, pexpire | 设置有效期 | `$redis->setTimeout('x', 3);`
+expireAt, pexpireAt | 设置固定差事时间 | `$redis->expireAt('x', $now + 3);`
+keys, getKeys | 获取匹配的key | `$redis->keys('user*');`
+scan | 扫描按键的空间 
+append | 追加到值 | `$redis->append('key', 'value2');`
+
+## 哈希
+方法 | 说明 | 例子 
+---|---|---
+hset | 增加到hash | `$redis->hSet('h', 'key1', 'hello');`
+hSetNx | 不存在则增加
+hGet | 获取
+hLen | hash的数量 | `$redis->hLen('h');`
+hDel | 删除hash中key,可多个
+hKeys | 返回hash中所有key | `$redis->hKeys('h')`
+hVals | 返回hash中所有值 | `$redis->hVals('h')`
+hGetAll | 获取整个hash，返回数组 | `$redis->hGetAll('h')`
+hExists | key是否存在 | `$redis->hExists('h', 'a');`
+hIncrBy | 递增hash中指定key的值 | `$redis->hIncrBy('h', 'x', 2);`
+hIncrByFloat | 递增hash中指定key的值,浮点型 | `$redis->hIncrByFloat('h','x', 1.5);`
+hMSet | 批量增加 | `$redis->hMSet('user:1', array('name' => 'Joe', 'salary' => 2000));`
+hMGet | 批量获取 | `$redis->hMGet('h', array('field1', 'field2'));`
+hScan | 扫描 
+hStrLen | 获取字符串长度
+
+```php
+public function hash()
+{
+    // 实例化Redis,并连接
+    $redis = new \Redis();
+    $redis->connect('192.168.100.77', 6379);
+
+    $hashName = 'hash';
+
+    // 创建hash
+    $redis->hset($hashName,'a',1);
+    $redis->hSetNx($hashName,'b',2);
+    $redis->hSetNx($hashName,'c',3);
+    $redis->hSetNx($hashName,'d',4);
+
+    // 获取所有
+    dump($redis->hGetAll($hashName));
+
+    // 获取值
+    dump('hash中b的值：'.$redis->hget($hashName,'b'));
+
+    // 获取长度
+    dump('hash长度：'.$redis->hLen($hashName));
+
+    // 删除
+    $redis->hDel($hashName,'a');
+    echo('删除a后：');
+    dump($redis->hGetAll($hashName));
+
+    // e是否存在
+    echo 'e是否存在';
+    dump($redis->hExists($hashName,'e'));
+    echo 'b是否存在';
+    dump($redis->hExists($hashName,'b'));
+
+    // 批量添加
+    $redis->hMset($hashName,['e'=>5,'f'=>6,'g'=>7]);
+    dump($redis->hGetAll($hashName));
+
+    // 批量获取
+    dump($redis->hMGet($hashName,['b','d','g']));
+
+}
+```
