@@ -4,10 +4,10 @@
 - [连接](#连接)
 - [服务端](#服务端)
 - [字符串](#字符串)
-- [哈希](#哈希Hash)
-- [列表](#列表List)
-- [集合](#集合Set)
-- [有序集合](#有序集合sorted set)
+- [哈希](#哈希)
+- [列表](#列表)
+- [集合](#集合)
+- [有序集合](#有序集合)
 
 ## 连接
 
@@ -65,7 +65,7 @@ keys, getKeys | 获取匹配的key | `$redis->keys('user*');`
 scan | 扫描按键的空间 
 append | 追加到值 | `$redis->append('key', 'value2');`
 
-## 哈希Hash
+## 哈希
 方法 | 说明 | 例子 
 ---|---|---
 hset | 增加到hash | `$redis->hSet('h', 'key1', 'hello');`
@@ -129,7 +129,7 @@ public function hash()
 }
 ```
 
-## 列表List
+## 列表
 方法 | 说明 | 例子 
 ---|---|---
 blPop, brPop | 删除列表中得到第一个/最后一个元素 
@@ -191,7 +191,7 @@ public function list()
 }
 ```
 
-## 集合Set
+## 集合
 方法 | 说明 | 例子 
 ---|---|---
 sAdd | 将一个或多个成员添加到集合中 | `$redis->sAdd('key1' , 'member2', 'member3');`
@@ -210,7 +210,7 @@ sUnion | 合集 | `$redis->sUnion('s0', 's1', 's2')`
 sUnionStore | 返回合集并存储 | `$redis->sUnionStore('dst', 's0', 's1', 's2')`
 sScan | 扫描
 
-##  有序集合sorted set
+##  有序集合
 方法 | 说明 | 例子 
 ---|---|---
 zAdd  | 将一个或多个成员添加到排序集或更新 | `$redis->zAdd('key', 1, 'val1');`
