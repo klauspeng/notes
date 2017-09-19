@@ -55,3 +55,9 @@ require 'vendor/autoload.php';
 
 转换 PSR-0/4 autoloading 到 classmap 可以获得更快的加载支持。
 特别是在生产环境下建议这么做，但由于运行需要一些时间，因此并没有作为默认值。
+
+
+## 全局配置镜像
+官方： `composer config -g repo.packagist composer https://packagist.org`
+
+中国： `composer config -g repo.packagist composer https://packagist.phpcomposer.com`
