@@ -401,3 +401,11 @@ var_dump($stmt->errorInfo());
 执行结果：
 
 ![mysql](https://github.com/klauspeng/notes/raw/master/img/pdo.png)
+
+
+## json_encode()不转义汉字
+```php
+$json = json_encode('hehehas哈哈说得很好是121245',JSON_UNESCAPED_UNICODE);//必须PHP5.4+ 
+echo $json; // "hehehas哈哈说得很好是121245"
+echo json_decode($json); // hehehas哈哈说得很好是121245
+```
