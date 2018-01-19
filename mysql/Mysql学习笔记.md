@@ -126,3 +126,6 @@ show index from user_t;
 2. R etrieve existing records
 3. U pdate existing records
 4. D elete existing records.
+
+## 命令行取消输入
+`\c`是取消当前输入sql执行
