@@ -14,3 +14,12 @@ Path to Git executable:`D:\Program Files (x86)\Git\cmd\git.exe`
 
 ## 激活
 [参考文章](http://blog.csdn.net/hywerr/article/details/72084061)
+
+## 单行注释设置
+方法里面的单行注释我喜欢，根据方法缩进，并且与`//`之后有一个空格，有点强迫症，哈哈！  
+设置如下：
+1. Setting->Editor->Code Style->PHP->Wrapping and Braces->勾选掉Comment at first column
+2. Setting->Editor->Code Style->PHP->Other->Comment Code->勾选掉Line comment at first column，并勾选中Add a space at comment start
+
+效果如下：  
+![单行注释效果](https://github.com/klauspeng/notes/raw/master/img/phpstorm_comment.png)
