@@ -61,3 +61,25 @@ require 'vendor/autoload.php';
 官方： `composer config -g repo.packagist composer https://packagist.org`
 
 中国： `composer config -g repo.packagist composer https://packagist.phpcomposer.com`
+
+## 增加自定义命名空间
+```json
+"autoload": {
+  "psr-4" : {
+    "Commands\\" : "app/commands"
+  },
+   "psr-0" : {
+    "Commands" : "app/commands"
+  }
+}
+```
+运行命令：`composer dumpautoload`
+
+## 自动引入文件
+```json
+"autoload": {
+  "files" : {
+    "/path/to/file/function.php"
+  }
+}
+```
