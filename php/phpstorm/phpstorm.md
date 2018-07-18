@@ -12,6 +12,8 @@
 ## git设置
 Path to Git executable:`D:\Program Files (x86)\Git\cmd\git.exe`
 
+ssh: settings-->Version Control-->Git ,and then, In the SSH executable dropdown, choose Native
+
 ## 激活
 [参考文章](http://blog.csdn.net/hywerr/article/details/72084061)
 
