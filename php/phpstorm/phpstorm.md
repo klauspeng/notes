@@ -32,3 +32,6 @@ ssh: settings-->Version Control-->Git ,and then, In the SSH executable dropdown,
 快捷键 | 功能 | 备注
 ---|---|---
 Ctrl+Alt+O | 去除无用`use`,让代码更整洁 | 
+
+## 插件
+[翻译插件](https://github.com/YiiGuxing/TranslationPlugin)
