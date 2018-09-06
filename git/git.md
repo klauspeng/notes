@@ -34,3 +34,6 @@
 151.101.100.133 avatars8.githubusercontent.com 
 # GitHub End
 ```
+
+### gitpage
+[hexo环境搭建](https://blog.csdn.net/Hoshea_chx/article/details/78826689)
